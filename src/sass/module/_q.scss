@@ -1,0 +1,47 @@
+.q {}
+
+.q__box {
+    background: $main;
+    border-radius: rem(4);
+    padding: rem(10);
+    @include mq('md') {
+        padding: rem(16) rem(21);
+        border-radius: rem(10);
+    }
+}
+
+.q__box--answer {
+    background: $white;
+    margin-top: rem(19);
+    @include mq('md') {
+        margin-top: rem(19);
+    }
+}
+
+.q__text {
+    color: $white;
+    letter-spacing: 0.01em;
+    position: relative;
+    padding-left: rem(37);
+    line-height: rem(25.6);
+    @include mq('md') {
+        font-size: rem(18);
+        line-height: rem(32.4);
+    }
+    &::after {
+        content: "Q";
+        font-size: rem(22);
+        font-weight: $bold;
+        position: absolute;
+        left: rem(5);
+        top: rem(-5);
+    }
+}
+
+.q__text--answer {
+    color: $black;
+    padding-left: rem(30);
+    &::after {
+        content: "A";
+    }
+}

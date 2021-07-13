@@ -1,0 +1,59 @@
+.section {}
+
+.section--about {
+    padding: rem(73) 0 rem(60);
+    @include mq('md') {
+        padding: rem(89) 0 rem(99);
+        margin-top: rem(-63);
+    }
+}
+
+.section--feature {
+    padding: rem(54) 0 rem(57);
+    @include mq('lg') {
+        padding: rem(89) 0 rem(132);
+    }
+}
+
+.section--flow {
+    padding: rem(47) 0 rem(74);
+    @include mq('lg') {
+        padding: rem(87) 0 rem(86);
+    }
+}
+
+.section--price {
+    padding: rem(49) 0;
+    @include mq('md') {
+        padding: rem(86) 0;
+    }
+}
+
+.section--question {
+    padding: rem(49) 0 rem(64);
+    @include mq('md') {
+        padding: rem(69) 0 rem(106);
+    }
+}
+
+.section--top {
+    padding: rem(60)+rem(52) 0 rem(22);
+    @include mq('md') {
+        padding: rem(117)+rem(72) 0 0;
+        margin-bottom: rem(10);
+    }
+}
+
+.section--trial {
+    padding: rem(40) 0;
+    @include mq('md') {
+        padding: rem(60) 0;
+    }
+}
+
+.section--users {
+    padding: rem(50) 0 rem(60);
+    @include mq('md') {
+        padding: rem(86) 0 rem(101);
+    }
+}

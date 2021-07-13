@@ -1,0 +1,25 @@
+.hnav {
+    height: inherit;
+    display: flex;
+    justify-content: end;
+    letter-spacing: 0.03em;
+    font-size: rem(14);
+    font-weight: $bold;
+}
+
+.hnav__item {
+    margin-right: rem(16);
+    height: inherit;
+}
+
+.hnav__link {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    // display: flex;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.hnav__btn {}

@@ -1,0 +1,17 @@
+.question {
+    background: #F9F9F9;
+}
+
+.question__items {
+    margin-top: rem(34);
+    @include mq('md') {
+        padding: 0 rem(138);
+        margin: rem(60) auto 0;
+    }
+}
+
+.question__item {
+    &:not(:last-child) {
+        margin-bottom: rem(29);
+    }
+}

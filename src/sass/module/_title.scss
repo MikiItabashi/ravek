@@ -1,0 +1,33 @@
+.title {
+    text-align: center;
+}
+
+.title__primary {
+    font-family: $second-font-family;
+    color: #9F9EC1;
+    font-weight: $bold;
+    font-size: rem(22);
+    padding-bottom: rem(7);
+    @include mq('md') {
+        font-size: rem(36);
+        padding-bottom: rem(18);
+    }
+}
+
+.title__secondary {
+    font-size: rem(30);
+    color: $main;
+    font-weight: $bold;
+    letter-spacing: 0.05em;
+    line-height: rem(42);
+    @include mq('md') {
+        font-size: rem(48);
+    }
+}
+
+.title__secondary--big {
+    font-size: rem(38);
+    @include mq('md') {
+        font-size: rem(60);
+    }
+}

@@ -1,0 +1,99 @@
+.table {
+    margin-top: rem(68);
+    @include mq('md') {
+        margin: rem(68) auto rem(42);
+    }
+}
+
+.table__body {}
+
+.table--transparent {
+    background: transparent;
+}
+
+.table__head {
+    background: $black;
+    color: $white;
+    text-align: center;
+    padding: rem(28) rem(7);
+    @include mq('md') {
+        padding: rem(41) rem(6);
+    }
+}
+
+.table__head--strong {
+    background: $main;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
+    margin-top: auto;
+}
+
+.table__plan {
+    font-size: rem(20);
+    line-height: rem(28.96);
+    font-weight: $bold;
+    @include mq('md') {
+        font-size: rem(24);
+    }
+}
+
+.table__plan--strong {
+    font-size: rem(24);
+}
+
+.table__price {
+    margin-top: rem(11);
+    margin-bottom: rem(28);
+    font-size: rem(12);
+    font-weight: $bold;
+    @include mq('md') {
+        font-size: rem(18);
+        margin-top: rem(16);
+    }
+    span {
+        font-size: rem(30);
+        @include mq('md') {
+            font-size: rem(36);
+        }
+    }
+}
+
+.table__price--strong {}
+
+.table__row {
+    th,
+    td {
+        padding: rem(13.5) rem(32);
+        @include mq('md') {
+            font-size: rem(22);
+        }
+    }
+    &:nth-child(2n) {
+        th,
+        td {
+            background: $white;
+        }
+    }
+    &:nth-child(2n + 1) {
+        th,
+        td {
+            background: #EDECFC;
+        }
+    }
+    th {}
+    td {
+        text-align: center;
+    }
+}
+
+.table__row--strong {
+    font-weight: $bold;
+}
+
+.table__btn {
+    th,
+    td {
+        text-align: center;
+        padding-top: rem(17);
+    }
+    .btn {}
+}

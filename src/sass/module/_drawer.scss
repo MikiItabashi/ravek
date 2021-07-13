@@ -1,0 +1,138 @@
+.drawer-icon {
+    width: rem(21);
+    height: inherit;
+    position: fixed;
+    top: rem(10);
+    right: rem(21);
+    z-index: $layer-drawer + 1;
+    display: block;
+    transition: transform 0.5s ease 0s;
+    @include mq('md') {
+        display: none;
+    }
+    &.is-active {
+        .drawer-icon__bar1 {
+            transform: rotate(-45deg);
+            top: rem(17);
+        }
+        .drawer-icon__bar2,
+        .drawer-icon__text {
+            display: none;
+        }
+        .drawer-icon__bar3 {
+            transform: rotate(45deg);
+            top: rem(17);
+        }
+    }
+}
+
+.drawer-icon__text {
+    font-size: rem(10);
+    transform: scale(0.6);
+    line-height: rem(6);
+    font-weight: $bold;
+    letter-spacing: 0.02em;
+    color: $main;
+}
+
+.drawer-icon__bars {
+    display: block;
+    position: relative;
+}
+
+.drawer-icon__bar1,
+.drawer-icon__bar2,
+.drawer-icon__bar3 {
+    transition: transform 0.3s;
+    position: absolute;
+    width: rem(21);
+    height: rem(3);
+    background: $main;
+    top: rem(7);
+    right: 0;
+}
+
+.drawer-icon__bar1 {
+    top: rem(7);
+}
+
+.drawer-icon__bar2 {
+    width: rem(13.13);
+    top: rem(16);
+}
+
+.drawer-icon__bar3 {
+    top: rem(24);
+}
+
+.drawer-content {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: rem(52);
+    z-index: $layer-drawer;
+    transform: translateY(-105%);
+    &.is-active {
+        transform: translateY(0);
+    }
+}
+
+.drawer-content__items {
+    position: fixed;
+    top: rem(82);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.drawer-content__item {
+    padding-left: rem(68);
+    font-size: rem(24);
+    line-height: rem(24);
+    letter-spacing: 0.03em;
+    font-weight: $bold;
+    &::before {
+        content: "";
+        position: absolute;
+        width: rem(20);
+        height: rem(20);
+        left: rem(30);
+        // top: 50%;
+        background: transparent;
+        border: rem(2) solid $main;
+        transform: rotate(45deg);
+    }
+    &:not(:last-child) {
+        margin-bottom: rem(40);
+    }
+}
+
+.drawer-content__link {
+    display: inline-block;
+    font-weight: $bold;
+    padding: rem(8.5);
+    font-size: rem(15);
+    position: relative;
+}
+
+.drawer__background {
+    position: fixed;
+    top: rem(52);
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #EDECFC;
+    z-index: $layer-drawer - 1;
+    display: none;
+    &.is-active {
+        display: block;
+    }
+}
+
+.drawer-content__btn {
+    margin-top: rem(62);
+}
+
+.drawer-content__btn1 {
+    margin-bottom: rem(24);
+}

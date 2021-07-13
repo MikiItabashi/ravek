@@ -1,0 +1,30 @@
+.users {}
+
+.users__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(16);
+    @include mq('md') {
+        margin-top: rem(40);
+        padding: 0 rem(111);
+    }
+}
+
+.users__item {
+    width: calc((100% - #{rem(11)} * 3) / 4);
+    &:not(:nth-child(4n)) {
+        margin-right: rem(11);
+    }
+    @include mq('md') {
+        width: calc((100% - #{rem(40)} * 3) / 4);
+        &:not(:nth-child(4n)) {
+            margin-right: rem(40);
+        }
+    }
+    &:nth-child(n + 5) {
+        margin-top: rem(13);
+        @include mq('md') {
+            margin-top: rem(50);
+        }
+    }
+}

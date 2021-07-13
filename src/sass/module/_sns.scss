@@ -1,0 +1,25 @@
+.sns {
+    color: $white;
+    @include mq('md') {
+        margin-top: rem(22);
+    }
+}
+
+.sns__title {
+    font-size: rem(18);
+    font-weight: $bold;
+    line-height: rem(17.9);
+}
+
+.sns__wrapper {
+    margin-top: rem(12);
+    display: flex;
+    justify-content: center;
+}
+
+.sns__list {
+    width: rem(24);
+    &:not(:last-child) {
+        margin-right: rem(18);
+    }
+}
